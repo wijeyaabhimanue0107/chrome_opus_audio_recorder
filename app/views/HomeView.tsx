@@ -53,7 +53,7 @@ const OpusRecorder = () => {
           .getUserMedia({ audio: true })
           .then((stream) => {
             const options = { mimeType: "audio/ogg" };
-            //@ts-ignore
+            // @ts-expect-error
             recorder = new MediaRecorder(stream, options, workerOptions);
 
             recorder.start();
