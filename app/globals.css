@@ -1,21 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+/* styles/opusRecorder.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* General Reset */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+/* Container Styles */
+div {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+/* Title */
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Buttons */
+button {
+  background-color: #dcd5d5;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(80, 200, 240, 0.4);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Button Icons */
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Audio Player */
+audio {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+}
+
+/* .audio-btn {
+  filter: brightness(0) invert(1);
+} */
+
+/* .red-btn {
+  filter: brightness(0) invert(1);
+} */
